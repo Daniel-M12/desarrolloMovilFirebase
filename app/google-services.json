@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "770788205732",
+    "firebase_url": "https://fir-matosupc-default-rtdb.firebaseio.com",
+    "project_id": "fir-matosupc",
+    "storage_bucket": "fir-matosupc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770788205732:android:0dcfc5be6088c4b085b231",
+        "android_client_info": {
+          "package_name": "com.matos.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-izAahQ9eYat3UpSJwx7ZuL24b0NUF38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
