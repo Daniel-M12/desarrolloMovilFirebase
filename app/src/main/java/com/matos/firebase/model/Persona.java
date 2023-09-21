@@ -1,5 +1,7 @@
 package com.matos.firebase.model;
 
+import androidx.annotation.NonNull;
+
 public class Persona {
     private String id;
     private String nombres;
@@ -36,5 +38,11 @@ public class Persona {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return nombres + ' ' + apellidos;
     }
 }
