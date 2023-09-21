@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
@@ -46,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         lstPersonas = findViewById(R.id.lstPersonas);
+        lstPersonas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(MainActivity.this,
+                        ""+listaPersonas.get(i).getNombres(),
+                        Toast.LENGTH_LONG);
+            }
+        });
     }
 
     private void inicializarFirebase() {
