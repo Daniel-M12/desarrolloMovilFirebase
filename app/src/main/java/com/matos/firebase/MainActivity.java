@@ -1,6 +1,7 @@
 package com.matos.firebase;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -53,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(MainActivity.this,
-                        ""+listaPersonas.get(i).getNombres(),
+                        "" + listaPersonas.get(i).getNombres(),
                         Toast.LENGTH_LONG);
+                mostrarMensaje(listaPersonas.get(i).getCorreo());
             }
         });
     }
@@ -85,5 +87,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void mostrarMensaje(String mensaje){
+        AlertDialog.Builder ventana = new AlertDialog.Builder(this);
+        ventana.setTitle("Mensaje inormativo");
+        ventana.setMessage(mensaje);
+        ventana.setPositiveButton("Aceptar", (dialogInterface, i) -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
+        ventana.create().show();
     }
 }
